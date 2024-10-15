@@ -2,7 +2,7 @@ import streamlit as st
 from workflow import app  # Ensure 'app' is accessible
 
 # Application Title
-st.title("VerbiVision: AI-Powered Text Analyzer")
+st.title("TextFusion: AI-Powered Text Analyzer")
 
 # User Input
 user_input = st.text_area("Enter the text you want to analyze:", height=200)
