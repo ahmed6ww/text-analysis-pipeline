@@ -1,6 +1,8 @@
 from langchain.prompts import PromptTemplate
 from langchain.schema import HumanMessage
 from typing import TypedDict
+
+import langsmith
 from configuration import llm
 
 def classification_node(state: dict):
@@ -11,6 +13,7 @@ def classification_node(state: dict):
     )
     message = HumanMessage(content=prompt.format(text=state["text"]))
     classification = llm.invoke([message]).content.strip()
+    
     return {"classification": classification}
 
 
