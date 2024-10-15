@@ -46,7 +46,7 @@ if __name__ == "__main__":
 # import streamlit as st
 # import asyncio
 # from workflow import app as workflow_app  # Ensure 'app' is accessible
-# # from langgraph.schema import GraphEvent
+
 
 # # Function to handle streaming and updating the UI
 # async def stream_workflow(user_input, placeholders):
