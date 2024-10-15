@@ -3,7 +3,7 @@ from langchain.schema import HumanMessage
 from typing import TypedDict
 from configuration import llm
 
-def classification_node(state: TypedDict):
+def classification_node(state: dict):
     ''' Classify the text into one of the categories: News, Blog, Research, or Other '''
     prompt = PromptTemplate(
         input_variables=["text"],
@@ -14,7 +14,7 @@ def classification_node(state: TypedDict):
     return {"classification": classification}
 
 
-def entity_extraction_node(state: TypedDict):
+def entity_extraction_node(state: dict):
     ''' Extract all the entities (Person, Organization, Location) from the text '''
     prompt = PromptTemplate(
         input_variables=["text"],
@@ -25,7 +25,7 @@ def entity_extraction_node(state: TypedDict):
     return {"entities": entities}
 
 
-def summarization_node(state: TypedDict):
+def summarization_node(state: dict):
     ''' Summarize the text in one short sentence '''
     prompt = PromptTemplate(
         input_variables=["text"],

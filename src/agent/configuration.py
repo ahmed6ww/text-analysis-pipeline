@@ -1,4 +1,5 @@
 import os
+from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_openai import ChatOpenAI
 from dotenv import load_dotenv
 
@@ -6,7 +7,10 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Set OpenAI API key
-os.environ["OPENAI_API_KEY"] = os.getenv('OPENAI_API_KEY')
+os.environ["GEMENI_API_KEY"] = os.getenv('GEMENI_API_KEY')
 
 # Configure the LLM (OpenAI ChatGPT)
-llm = ChatOpenAI(model="gpt-4o-mini", temperature=0)
+llm = ChatGoogleGenerativeAI(
+        model="gemini-1.5-flash",
+         api_key=os.getenv('GEMENI_API_KEY')
+    )

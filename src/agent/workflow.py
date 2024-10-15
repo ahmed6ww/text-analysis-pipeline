@@ -1,5 +1,5 @@
 from langgraph.graph import StateGraph, END
-from langchain_core.runnables.graph import MermaidDrawMethod
+# from langchain_core.runnables.graph import MermaidDrawMethod
 from IPython.display import display, Image
 from graph import classification_node, entity_extraction_node, summarization_node
 from state import State
@@ -22,13 +22,13 @@ workflow.add_edge("summarization", END)
 app = workflow.compile()
 
 # Display graph
-display(
-    Image(
-        app.get_graph().draw_mermaid_png(
-            draw_method=MermaidDrawMethod.API,
-        )
-    )
-)
+# display(
+#     Image(
+#         app.get_graph().draw_mermaid_png(
+#             draw_method=MermaidDrawMethod.API,
+#         )
+#     )
+# )
 
 # Sample text and invoking the workflow
 sample_text = """
