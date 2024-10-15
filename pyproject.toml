@@ -2,7 +2,7 @@
 name = "Text Analysis Pipeline"
 version = "0.1.0"
 description = ""
-authors = ["ahmed369ww@gmail.com>"]
+authors = ["Ahmed <ahmed369ww@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.12"
